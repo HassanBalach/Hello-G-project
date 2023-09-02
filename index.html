@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, G</title>
+    <style>
+    .container{
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        /* border: 2px solid ; */
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+    }
+    button{
+        padding: 10px;
+        margin: 10px;
+        font-size: x-large;
+    }
+    h1{
+        font-size: 50px;
+    }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <h1 id="content">Hello, G</h1>
+        <button id="btn">Change Message</button>       
+    </div> 
+ 
+
+    <script>
+       
+       const btn = document.getElementById('btn');
+        const h1 = document.getElementById('content')
+        console.log(btn , h1);
+        
+        function startList(){
+            let message = prompt("Enter a new message")
+            // console.log("Helllo G")
+            if (message !== ""){
+
+                h1.textContent = message; 
+            }
+        }
+        
+        
+        btn.addEventListener("click", startList)
+
+
+    </script>
+</body>
+</html>
